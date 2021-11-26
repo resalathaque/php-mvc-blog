@@ -1,6 +1,7 @@
 <?php
 
 include 'model/db.php';
+include 'model/user.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	try {
