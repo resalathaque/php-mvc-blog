@@ -4,6 +4,7 @@ include 'model/db.php';
 include 'model/user.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
 	try {
 		if (empty($_POST['name'])) throw new Exception("Please submit your name");
 		if (empty($_POST['email'])) throw new Exception("Please submit your email");
@@ -18,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	} catch (Exception $e) {
 		$error_msg = $e->getMessage();
 	}
+	
 }
 
 include 'views/signup_form.php';
