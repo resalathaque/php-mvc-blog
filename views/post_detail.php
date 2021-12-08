@@ -5,9 +5,13 @@
 
 	<h3><?php echo $post['title'] ?></h3>
 	<div><?php echo $post['post'] ?></div>
-	<p>Submited by <?php echo get_user_by_id($post['user_id'])['name'] ?></p>
 
+	<?php $user = get_user_by_id($post['user_id']); ?>
 
+	<p>Submited by <a href="/profile.php?id=<?php echo $user['id'] ?>">
+		<?php echo $user['name'] ?>
+		</a></p>
+		
 	<a href="/">Back Home</a>
 </div>
 

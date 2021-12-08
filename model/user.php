@@ -24,4 +24,11 @@ function get_user_by_id($user_id) {
 	return $stmt->fetch();
 }
 
+function update_user_password($id, $new_password) {
+	$pdo = dbconnect();
+	$stmt = $pdo->prepare('UPDATE users SET password = :password WHERE id = :id');
+	return $stmt->execute([':password' => $new_password, ':id' => $id]);
+}
+
+
 ?>

@@ -19,13 +19,12 @@ function all_post() {
 function get_post_by_id($id) {
 	$pdo = dbconnect();
 
-	$stmt = $pdo->prepare('SELECT * FROM posts WHERE id =  :id');
+	$stmt = $pdo->prepare('SELECT * FROM posts WHERE id = :id');
 	$stmt->execute([':id' => $id]);
 
 	return $stmt->fetch();
-
-
 }
+
 
 
 
