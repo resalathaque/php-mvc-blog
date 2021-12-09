@@ -17,6 +17,11 @@
 				<form method="post" class="mb-3">
 
 					<div class="form-group">
+						<label>Name</label>
+						<input value="<?php echo $user['name'] ?>" type="text" name="name" class="form-control" />
+					</div>
+
+					<div class="form-group">
 						<label>Current Password</label>
 						<input type="password" name="password" class="form-control" />
 					</div>

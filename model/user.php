@@ -30,5 +30,11 @@ function update_user_password($id, $new_password) {
 	return $stmt->execute([':password' => $new_password, ':id' => $id]);
 }
 
+function update_user_name($id, $new_name) {
+	$pdo = dbconnect();
+	$stmt = $pdo->prepare('UPDATE users SET name = :name WHERE id = :id');
+	return $stmt->execute([':name' => $new_name, ':id' => $id]);
+}
+
 
 ?>
